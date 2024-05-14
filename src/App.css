@@ -1,6 +1,46 @@
 #root {
   width: 100%;
-  max-width: 1200px;
-  padding: 2rem;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+
+
 }
 
+#root:has(.game-screen),
+#root:has(.loading-screen) {
+  background: url('assets/images/background.jpg') no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+#root::before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1;
+}
+
+video {
+  position: fixed;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  
+}
+
+.screen {
+  max-width: 1200px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}

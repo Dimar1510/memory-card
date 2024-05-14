@@ -2,9 +2,9 @@ import logo from '../assets/images/logo.png'
 import '../styles/Start.css'
 function Start({handleChangeScreen, handleSetSize}) {
     return (  
-        <div className="start-screen">
-            <img src={logo} alt="HS logo" />
-            <h1>Hearthstone legendary memory game</h1>
+        <div className="start-screen screen">
+            <img className='logo'src={logo} alt="HS logo" />
+            <h1>Memory game</h1>
             <div className="buttons">
             <button
                 onClick={async() => {

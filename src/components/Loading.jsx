@@ -11,7 +11,7 @@ function Loading({handleChangeCardList, handleChangeScreen, size}) {
   }, [])
 
   return (
-      <div className="loading-screen">
+      <div className="loading-screen screen">
         <h1 className="loading">Loading...</h1>
       </div>
   )

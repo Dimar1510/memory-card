@@ -27,7 +27,6 @@ export default async function fetchCards(count) {
             const item = cards[Math.floor(Math.random()*cards.length)]
             selectedCards.add(item)
         }
-        console.log(data);
         return([...selectedCards])
     } catch (error) {
         console.error(error);

@@ -1,0 +1,40 @@
+.start-screen {
+    
+}
+
+@keyframes popout {
+    from {
+        transform: scale(0);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
+
+.logo {
+    animation: popout 1s ease-in-out forwards;
+    max-width: 70%;
+}
+
+.start-screen h1 {
+    margin-bottom: 5rem;
+    font-family: var(--font-header);
+    font-size: 3rem;
+    text-transform: uppercase;
+    animation: popout 1s ease-in-out forwards;
+}
+
+.buttons {
+    display: flex;
+    gap: 1rem;
+    transform: scale(0);
+    animation: popout 1s ease-in-out 0.5s forwards;
+}
+
+.buttons button {
+    font-size: 2rem;
+    padding: 1rem;
+    font-family: var(--font-header);
+    text-transform: uppercase;
+}

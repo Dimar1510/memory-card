@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
-
+@font-face {
+  font-family: unical;
+  src: url(assets/fonts/LHFUncialCapsRegular.ttf);
+}
 *, *::before, *::after {
   margin: 0;
   padding: 0;
@@ -7,10 +10,12 @@
   list-style: none;
 }
 
+
 :root {
   --clr-dark: #e2e2e2;
   --clr-accent: #003C43;
   --clr-light: white;
+  --font-header: unical;
 }
 
 body {
