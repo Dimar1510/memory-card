@@ -1,0 +1,9 @@
+dialog {
+    margin: auto;
+    min-width: 250px;
+    width: 70%;
+    max-width: 800px;
+    aspect-ratio: 16/9;
+    background-color: rgb(53, 54, 51);
+    color: white;
+}

@@ -1,0 +1,8 @@
+.game-screen {
+    width: 100%;
+}
+.grid {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat( auto-fit, minmax(250px, 1fr) );
+}
