@@ -8,6 +8,8 @@
     justify-content: center;
 }
 
+
+
 button:not(.card) {
     font-size: 1rem;
     padding: 1rem 2rem;
@@ -39,5 +41,14 @@ button:not(.card):hover {
     color: var(--clr-light);
     box-shadow: inset 0px 0px 10px 5px rgba(0, 0, 0, 0.5);
 }
+
+@media (max-width: 600px) {
+    .buttons {
+        flex-direction: column;
+    }
+    .buttons button {
+        width: 100%;
+    }
+  }
 
 
