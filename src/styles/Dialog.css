@@ -3,10 +3,10 @@ dialog {
     min-width: 250px;
     width: 70%;
     max-width: 700px;
-    background-color: rgb(53, 54, 51);
     color: white;
     border-radius: 1rem;
     border: none;
+    background-color: rgb(117, 76, 0);
     background: url('../assets/images/wood.JPG') no-repeat;
     background-size: cover;
     
