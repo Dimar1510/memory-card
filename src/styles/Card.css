@@ -1,4 +1,6 @@
-
+.tilt {
+    user-select: none;
+}
 .card {
     cursor: pointer;
     background: none;
@@ -19,6 +21,7 @@
 
 .grid.back .card{
     transform: rotateY(180deg);
+    
 }
 
 .card-face {

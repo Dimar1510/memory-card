@@ -36,8 +36,6 @@ function Game({initialCardList, handleChangeScreen, highScore, handleSetHighScor
         setStatus(status)
     }
 
-    // const updateHighScore = () => {handleSetHighScore}
-
     async function handleCardClick(card) {
         if (status !== 'game') return
         if (!clickedCards.find(id => id === card.id)) {
@@ -49,6 +47,7 @@ function Game({initialCardList, handleChangeScreen, highScore, handleSetHighScor
                 score >= highScore && handleSetHighScore()
             } else {
                 handleChangeClickedCards(card.id)
+                score >= highScore && handleSetHighScore()
                 handleSetStatus('win')
                 const gameOverDialog = document.querySelector(".game-over");
                 gameOverDialog.showModal();

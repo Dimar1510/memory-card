@@ -6,7 +6,7 @@ function Dialog({score, status, handleChangeScreen}) {
     return ( 
         <dialog 
             className="game-over"
-            style={ status === win 
+            style={ status === 'win'
                 ? {boxShadow:'1px 1px 10px 5px var(--clr-gold)'}
                 : {boxShadow:'1px 1px 10px 5px maroon'}}
         >

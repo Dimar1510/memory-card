@@ -9,7 +9,7 @@ function Start({handleChangeScreen, handleSetSize}) {
             <button
                 className='btn-menu'
                 onClick={async() => {
-                    handleSetSize(4)
+                    handleSetSize(5)
                     handleChangeScreen('loading')
                 }}
             >

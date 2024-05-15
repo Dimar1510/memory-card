@@ -3,6 +3,7 @@ import Game from './components/Game'
 import Start from './components/Start.jsx'
 import Loading from './components/Loading.jsx'
 import video from './assets/images/loop.mp4'
+import loading from './assets/images/loading.mp4'
 import './App.css'
 import './styles/Buttons.css'
 
@@ -29,7 +30,6 @@ function App() {
 
   function handleSetHighScore() {
     setHighScore(highScore => highScore + 1)
-    console.log('set')
   }
 
   return (
@@ -60,11 +60,16 @@ function App() {
         )
       }
       {screen === 'loading' && (
-        <Loading
-          handleChangeScreen = {handleChangeScreen} 
-          handleChangeCardList = {handleChangeCardList} 
-          size = {size}
-        />
+        <>
+          <video autoPlay muted loop id='myVideo'>
+            <source src={loading} type='video/mp4'/>
+          </video>
+          <Loading
+            handleChangeScreen = {handleChangeScreen} 
+            handleChangeCardList = {handleChangeCardList} 
+            size = {size}
+          />
+        </>
         )
       }
 

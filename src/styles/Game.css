@@ -33,6 +33,10 @@
     padding: 1rem;
 }
 
+.grid.back {
+    pointer-events: none;
+}
+
 .game-field {
     flex: 1;
     display: flex;

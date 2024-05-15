@@ -7,7 +7,7 @@ function Card({name, imgURL, onClick}) {
             tiltReverse={true}
 
             className='tilt'
-            scale={1.05}>
+            scale={1}>
             <button 
                 className="card"
                 onClick={onClick}
