@@ -7,6 +7,7 @@ function Start({handleChangeScreen, handleSetSize}) {
             <h1>Memory game</h1>
             <div className="buttons">
             <button
+                className='btn-menu'
                 onClick={async() => {
                     handleSetSize(4)
                     handleChangeScreen('loading')
@@ -16,6 +17,7 @@ function Start({handleChangeScreen, handleSetSize}) {
             </button>    
 
             <button
+                className='btn-menu'
                 onClick={async() => {
                     handleSetSize(8)
                     handleChangeScreen('loading')
@@ -24,6 +26,7 @@ function Start({handleChangeScreen, handleSetSize}) {
                 Medium
             </button>   
             <button
+                className='btn-menu'
                 onClick={async() => {
                     handleSetSize(12)
                     handleChangeScreen('loading')

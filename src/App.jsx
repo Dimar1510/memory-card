@@ -4,6 +4,7 @@ import Start from './components/Start.jsx'
 import Loading from './components/Loading.jsx'
 import video from './assets/images/loop.mp4'
 import './App.css'
+import './styles/Buttons.css'
 
 
 

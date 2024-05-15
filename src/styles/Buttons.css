@@ -1,0 +1,43 @@
+.buttons {
+    display: flex;
+    gap: 2rem;
+    transform: scale(0);
+    animation: popout 1s ease-in-out 0.5s forwards;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+button:not(.card) {
+    font-size: 1rem;
+    padding: 1rem 2rem;
+    font-family: var(--font-header);
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    border-radius: 1rem;
+    cursor: pointer;
+    transition: 0.3s ease-out;
+    font-weight: 500;
+    outline: none;
+    border: none;
+}
+
+button:not(.card):hover {
+    background-color: #ff9c00;
+    color: black;
+}
+
+.btn-restart,
+.btn-menu {
+    background-color: var(--clr-btn-prim);
+    color: var(--clr-light);
+    box-shadow: inset 0px 0px 10px 5px rgba(0, 0, 0, 0.5);
+}
+
+.btn-back {
+    background-color: var(--clr-btn-sec);
+    color: var(--clr-light);
+    box-shadow: inset 0px 0px 10px 5px rgba(0, 0, 0, 0.5);
+}
+
+

@@ -1,6 +1,4 @@
-.start-screen {
-    
-}
+
 
 @keyframes popout {
     from {
@@ -25,16 +23,3 @@
     animation: popout 1s ease-in-out forwards;
 }
 
-.buttons {
-    display: flex;
-    gap: 1rem;
-    transform: scale(0);
-    animation: popout 1s ease-in-out 0.5s forwards;
-}
-
-.buttons button {
-    font-size: 2rem;
-    padding: 1rem;
-    font-family: var(--font-header);
-    text-transform: uppercase;
-}

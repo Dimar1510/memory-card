@@ -15,7 +15,11 @@
   --clr-dark: #e2e2e2;
   --clr-accent: #003C43;
   --clr-light: white;
+  --clr-btn-prim: #aa25b4;
+  --clr-btn-sec: #215162;
+  --clr-gold: #ff9c00;
   --font-header: unical;
+  --screen-medium: max-width: 1600px;
 }
 
 body {
@@ -32,4 +36,11 @@ body {
 button, input {
   font-family: inherit;
 
+}
+
+@media (max-width: 1600px) {
+  body {
+    height: auto;
+    min-height: 100svh;
+  }
 }

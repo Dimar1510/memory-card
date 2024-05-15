@@ -38,9 +38,11 @@ function Game({initialCardList, handleChangeScreen, highScore, handleSetHighScor
 
     // const updateHighScore = () => {handleSetHighScore}
 
-    function handleCardClick(card) {
+    async function handleCardClick(card) {
         if (status !== 'game') return
         if (!clickedCards.find(id => id === card.id)) {
+            handleSetClass('grid back')
+            await timeOut(800)
             if (score < cardList.length - 1) {
                 handleShuffleList()
                 handleChangeClickedCards(card.id)
@@ -50,12 +52,21 @@ function Game({initialCardList, handleChangeScreen, highScore, handleSetHighScor
                 handleSetStatus('win')
                 const gameOverDialog = document.querySelector(".game-over");
                 gameOverDialog.showModal();
+                gameOverDialog.addEventListener('cancel', (event) => {
+                    event.preventDefault();
+                });
             }
+            await timeOut(200)
+            handleSetClass('grid')
         } else {
             handleSetStatus('lost')
             const gameOverDialog = document.querySelector(".game-over");
             gameOverDialog.showModal();
+            gameOverDialog.addEventListener('cancel', (event) => {
+                event.preventDefault();
+            });
         }
+        
     }
 
     function handleSetClass(className) {
@@ -85,19 +96,17 @@ function Game({initialCardList, handleChangeScreen, highScore, handleSetHighScor
                                 imgURL={card.imgURL} 
                                 name={card.name} 
                                 key={card.id}
-                                onClick={async () => {
-                                    handleSetClass('grid back')
-                                    await timeOut(800)
+                                onClick={() => {
+
                                     handleCardClick(card)
-                                    await timeOut(200)
-                                    handleSetClass('grid')
+
                                 }}
                             />
                         )
                     })}
                     
                 </div>
-                <p className="count">{clickedCards.length+1}/{cardList.length}</p>
+                <p className="count">{score}/{cardList.length}</p>
                 <Dialog score={score} status={status} handleChangeScreen={handleChangeScreen}/>
             </div>
         </div>

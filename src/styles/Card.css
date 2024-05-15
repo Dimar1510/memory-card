@@ -1,3 +1,4 @@
+
 .card {
     cursor: pointer;
     background: none;
@@ -5,6 +6,7 @@
     transition: 1s ease;
     transform-style: preserve-3d;
     position: relative;
+    width: 220px;
 }
 .card-img {
     width: 100%;
