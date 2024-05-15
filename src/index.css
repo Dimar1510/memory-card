@@ -30,6 +30,7 @@ body {
   background-color: #333;
   color: white;
   height: 100vh;
+  background-color: rgb(117, 76, 0);
 }
 
 button, input {
