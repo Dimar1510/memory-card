@@ -19,7 +19,6 @@
   --clr-btn-sec: #215162;
   --clr-gold: #ff9c00;
   --font-header: unical;
-  --screen-medium: max-width: 1600px;
 }
 
 body {
@@ -30,7 +29,7 @@ body {
   font-weight: 300;
   background-color: #333;
   color: white;
-  height: 100svh;
+  height: 100vh;
 }
 
 button, input {
@@ -41,6 +40,6 @@ button, input {
 @media (max-width: 1600px) {
   body {
     height: auto;
-    min-height: 100svh;
+    min-height: 100vh;
   }
 }
