@@ -61,7 +61,7 @@ function App() {
       }
       {screen === 'loading' && (
         <>
-          <video autoPlay muted loop id='myVideo'>
+          <video autoPlay muted loop id='myVideo' playsInline>
             <source src={loading} type='video/mp4'/>
           </video>
           <Loading
