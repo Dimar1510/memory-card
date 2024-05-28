@@ -39,7 +39,7 @@ function App() {
       {screen === 'start' && (
         <>
           <video autoPlay muted loop id='myVideo'>
-            <source src={video} type='video/mp4'/>
+            <source src={video} type='video/mp4'playsInline/>
           </video>
           <Start
             handleChangeScreen = {handleChangeScreen}
