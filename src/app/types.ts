@@ -30,3 +30,8 @@ export interface IMyCard {
   imgURL: string;
   id: number;
 }
+
+export interface IScreenProps {
+  handleChangeScreen: (screen: string) => void;
+  handleSetSize: (size: number) => void;
+}

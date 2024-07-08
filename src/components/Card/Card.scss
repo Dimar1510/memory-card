@@ -1,0 +1,54 @@
+@import "src/vars.scss";
+
+.tilt {
+  user-select: none;
+}
+.card {
+  cursor: pointer;
+  background: none;
+  border: none;
+  transition: 1s ease;
+  transform-style: preserve-3d;
+  position: relative;
+  width: 220px;
+
+  .face {
+    width: 100%;
+    height: 100%;
+  }
+
+  .back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("src/assets/images/back-card.png") no-repeat;
+    backface-visibility: hidden;
+    background-size: contain;
+    background-position: center;
+    transform: rotateY(180deg);
+  }
+
+  .image {
+    width: 100%;
+    height: 100%;
+  }
+
+  &:hover {
+    .image {
+      filter: brightness(120%);
+    }
+  }
+
+  @media (max-width: $screen-lg) {
+    width: 180px;
+  }
+
+  @media (max-width: $screen-md) {
+    width: 150px;
+  }
+  @media (max-width: $screen-sm) {
+    width: 120px;
+  }
+}

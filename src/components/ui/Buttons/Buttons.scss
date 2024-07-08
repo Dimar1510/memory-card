@@ -1,0 +1,32 @@
+@import "src/vars.scss";
+
+.button {
+  font-size: 1rem;
+  padding: 1rem 2rem;
+  font-family: $font-header;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  border-radius: 1rem;
+  cursor: pointer;
+  transition: 0.3s ease-out;
+  font-weight: 500;
+  outline: none;
+  border: none;
+}
+
+.button:hover {
+  background-color: $clr-gold;
+  color: black;
+}
+
+.menu__button {
+  background-color: $clr-btn-prim;
+  color: $clr-light;
+  box-shadow: inset 0px 0px 10px 5px rgba(0, 0, 0, 0.5);
+}
+
+.button_back {
+  background-color: $clr-btn-sec;
+  color: $clr-light;
+  box-shadow: inset 0px 0px 10px 5px rgba(0, 0, 0, 0.5);
+}

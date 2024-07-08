@@ -1,8 +1,10 @@
-import { useState } from "react";
-import Card from "../Card";
-import "../../styles/Game.css";
-import Dialog from "../Dialog";
-import { IMyCard } from "../../app/types";
+import { useRef, useState } from "react";
+import { IMyCard } from "src/app/types";
+import Card from "src/components/Card/Card";
+import Dialog from "src/components/Dialog/Dialog";
+import "./Game.scss";
+import BackButton from "src/components/ui/Buttons/BackButton";
+import React from "react";
 
 interface IScreenProps {
   handleChangeScreen: (screen: string) => void;
@@ -22,11 +24,12 @@ const Game: React.FC<IScreenProps> = ({
   const [status, setStatus] = useState("game");
   const score = clickedCards.length;
   const [className, setClassName] = useState("grid");
+  const ref = useRef<HTMLDialogElement>(null);
 
   function shuffle(array: IMyCard[]) {
     let currentIndex = array.length;
     while (currentIndex != 0) {
-      let randomIndex = Math.floor(Math.random() * currentIndex);
+      const randomIndex = Math.floor(Math.random() * currentIndex);
       currentIndex--;
       [array[currentIndex], array[randomIndex]] = [
         array[randomIndex],
@@ -64,8 +67,7 @@ const Game: React.FC<IScreenProps> = ({
           handleChangeClickedCards(card.id);
           score >= highScore && handleSetHighScore();
           handleSetStatus("win");
-          const gameOverDialog: HTMLDialogElement | null =
-            document.querySelector(".game-over");
+          const gameOverDialog = ref.current;
           gameOverDialog?.showModal();
           gameOverDialog?.addEventListener("cancel", (event) => {
             event.preventDefault();
@@ -75,8 +77,7 @@ const Game: React.FC<IScreenProps> = ({
         handleSetClass("grid");
       } else {
         handleSetStatus("lost");
-        const gameOverDialog: HTMLDialogElement | null =
-          document.querySelector(".game-over");
+        const gameOverDialog = ref.current;
         gameOverDialog?.showModal();
         gameOverDialog?.addEventListener("cancel", (event) => {
           event.preventDefault();
@@ -94,20 +95,15 @@ const Game: React.FC<IScreenProps> = ({
   }
 
   return (
-    <div className="game-screen screen">
-      <div className="game-header">
-        <button
-          className="btn-back"
-          onClick={() => handleChangeScreen("start")}
-        >
-          Back
-        </button>
+    <div className="game screen">
+      <div className="header">
+        <BackButton handleChangeScreen={handleChangeScreen} />
         <div className="score">
           <div>Score: {score}</div>
           <div>High score: {highScore}</div>
         </div>
       </div>
-      <div className="div game-field">
+      <div className="field">
         <div className="instructions">Click each card only once!</div>
         <div className={className}>
           {cardList?.map((card) => {
@@ -127,7 +123,11 @@ const Game: React.FC<IScreenProps> = ({
         <p className="count">
           {score}/{cardList?.length}
         </p>
-        <Dialog status={status} handleChangeScreen={handleChangeScreen} />
+        <Dialog
+          status={status}
+          ref={ref}
+          handleChangeScreen={handleChangeScreen}
+        />
       </div>
     </div>
   );

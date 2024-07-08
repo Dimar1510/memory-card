@@ -1,12 +1,12 @@
 import { useState } from "react";
-import Game from "./components/screens/Game.js";
-import Start from "./components/screens/Start.js";
-import Loading from "./components/screens/Loading.js";
 import video from "./assets/video/loop.mp4";
 import loading from "./assets/video/loading.mp4";
-import "./App.css";
-import "./styles/Buttons.css";
-import { IMyCard } from "./app/types.js";
+import { IMyCard } from "./app/types";
+import "./App.scss";
+import Game from "./components/screens/Game/Game";
+import Start from "./components/screens/Start/Start";
+import Loading from "./components/screens/Loading/Loading";
+import React from "react";
 
 function App() {
   const [screen, setScreen] = useState("start");

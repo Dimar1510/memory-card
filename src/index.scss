@@ -1,24 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap");
 @font-face {
   font-family: unical;
   src: url(assets/fonts/LHFUncialCapsRegular.ttf);
 }
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   list-style: none;
-}
-
-
-:root {
-  --clr-dark: #e2e2e2;
-  --clr-accent: #003C43;
-  --clr-light: white;
-  --clr-btn-prim: #aa25b4;
-  --clr-btn-sec: #215162;
-  --clr-gold: #ff9c00;
-  --font-header: unical;
 }
 
 body {
@@ -33,9 +24,9 @@ body {
   background-color: rgb(117, 76, 0);
 }
 
-button, input {
+button,
+input {
   font-family: inherit;
-
 }
 
 @media (max-width: 1600px) {

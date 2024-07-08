@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
-import { IMyCard } from "../../app/types";
-import useFetch from "../../hooks/useFetch";
+import "./Loading.scss";
+import { IMyCard } from "src/app/types";
+import useFetch from "src/hooks/useFetch";
 
 interface IScreenProps {
   handleChangeScreen: (screen: string) => void;
@@ -23,7 +24,7 @@ const Loading: React.FC<IScreenProps> = ({
   }, [loading]);
 
   return (
-    <div className="loading-screen screen">
+    <div className="loading screen">
       {loading && <h1 className="loading">Loading...</h1>}
       {error && <h1 className="loading">Error: {error}</h1>}
     </div>

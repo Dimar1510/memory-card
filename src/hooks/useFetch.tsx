@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { ICard, IMyCard } from "../app/types";
+import { ICard, IMyCard } from "src/app/types";
 
 function useFetch(count: number): {
   data: Set<IMyCard>;
@@ -36,7 +36,7 @@ function useFetch(count: number): {
             card.cost !== 0
         );
 
-        for (let card of data) {
+        for (const card of data) {
           cards.push({
             name: card.name,
             imgURL: card.imgGold,

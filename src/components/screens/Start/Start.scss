@@ -1,0 +1,46 @@
+@import "src/vars.scss";
+
+.start {
+  img.logo {
+    animation: popout 1s ease-in-out forwards;
+    max-width: 70%;
+    max-height: 50vh;
+  }
+
+  h1 {
+    margin-bottom: 5rem;
+    font-family: $font-header;
+    font-size: clamp(1rem, 5vw, 3rem);
+    text-transform: uppercase;
+    animation: popout 1s ease-in-out forwards;
+  }
+
+  .buttons {
+    display: flex;
+    gap: 2rem;
+    transform: scale(0);
+    animation: popout 1s ease-in-out 0.5s forwards;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    @media (max-width: $screen-sm) {
+      flex-direction: column;
+    }
+
+    .button {
+      @media (max-width: $screen-sm) {
+        width: 100%;
+      }
+    }
+  }
+
+  @keyframes popout {
+    from {
+      transform: scale(0);
+    }
+
+    to {
+      transform: scale(1);
+    }
+  }
+}

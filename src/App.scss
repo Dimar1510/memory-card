@@ -7,15 +7,15 @@
   overflow: hidden;
 }
 
-#root:has(.game-screen) {
-  background: url('assets/images/background.jpg') no-repeat;
+#root:has(.game) {
+  background: url("assets/images/background.jpg") no-repeat;
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
 }
 
 #root::before {
-  content: '';
+  content: "";
   width: 100%;
   height: 100%;
   position: fixed;
@@ -45,10 +45,4 @@ video {
   justify-content: center;
   align-items: center;
   z-index: 2;
-}
-
-.loading {
-  font-family: var(--font-header);
-  font-size: 3rem;
-  letter-spacing: 0.3rem;
 }

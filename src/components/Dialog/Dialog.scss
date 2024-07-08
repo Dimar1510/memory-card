@@ -1,0 +1,67 @@
+@import "src/vars.scss";
+
+.dialog {
+  margin: auto;
+  min-width: 250px;
+  width: 70%;
+  max-width: 700px;
+  color: white;
+  border-radius: 1rem;
+  border: none;
+  background-color: rgb(117, 76, 0);
+  background: url("src/assets/images/wood.JPG") no-repeat;
+  background-size: cover;
+
+  .wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 2rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  .header {
+    border-radius: 1rem;
+    font-family: $font-header;
+    letter-spacing: 0.2rem;
+  }
+
+  .img {
+    height: 300px;
+  }
+
+  .buttons {
+    display: flex;
+    gap: 1rem;
+    transform: scale(0);
+    animation: popout 1s ease-in-out 0.5s forwards;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.dialog[open] {
+  animation: popout 0.5s ease-in-out;
+}
+
+@keyframes popout {
+  from {
+    transform: scale(0);
+  }
+
+  to {
+    transform: scale(1);
+  }
+}
