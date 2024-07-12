@@ -3,11 +3,11 @@
 .game {
   width: 100%;
   justify-content: space-between;
-  padding: 2rem;
-  gap: 1rem;
+  padding: 2rem 2rem 0;
 
   @media (max-width: $screen-lg) {
     padding: 2rem 1rem;
+    gap: 2rem;
   }
 
   > .header {
@@ -43,7 +43,8 @@
       flex-wrap: wrap;
       justify-content: center;
       width: 100%;
-      gap: 2rem;
+      row-gap: 1rem;
+      column-gap: 2rem;
       animation: popout 1s ease-in-out forwards;
       padding: 1rem;
 

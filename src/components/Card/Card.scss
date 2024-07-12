@@ -10,7 +10,7 @@
   transition: 1s ease;
   transform-style: preserve-3d;
   position: relative;
-  width: 220px;
+  width: 190px;
 
   .face {
     width: 100%;
@@ -42,7 +42,7 @@
   }
 
   @media (max-width: $screen-lg) {
-    width: 180px;
+    width: 170px;
   }
 
   @media (max-width: $screen-md) {
