@@ -7,6 +7,7 @@ import Game from "./components/screens/Game/Game";
 import Start from "./components/screens/Start/Start";
 import Loading from "./components/screens/Loading/Loading";
 import React from "react";
+import bg from "./assets/images/bg.jpg";
 
 function App() {
   const [screen, setScreen] = useState("start");
@@ -38,6 +39,7 @@ function App() {
           <video autoPlay muted loop id="myVideo" playsInline>
             <source src={video} type="video/mp4" />
           </video>
+          <img src={bg} className="bg-image" />
           <Start
             handleChangeScreen={handleChangeScreen}
             handleSetSize={handleSetSize}
